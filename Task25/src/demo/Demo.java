@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by alina on 09.03.17.
  */
 public class Demo {
-    private final static int SIZE = 100_000_000;
+    private final static int SIZE = 8_000_000;
     public static void main(String[] args) {
         ArrayList<FlyWeightBacteria> colony = new ArrayList<>();
 
@@ -16,6 +16,7 @@ public class Demo {
 
             for (int i = 0; i < SIZE; i++) {
                 colony.add(new FlyWeightBacteria("female"));
+                colony.add(new FlyWeightBacteria("male"));
             }
         }catch (OutOfMemoryError e){
             System.err.println("Too much bacteria dude");
